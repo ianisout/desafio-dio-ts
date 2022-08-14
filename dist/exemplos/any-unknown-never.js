@@ -1,11 +1,11 @@
 "use strict";
-let anyEstaDeVolta; // pode ser qualquer tipo
-let unknownValue; // obrigado a validar valor antes de alocar dentro de um unknown
+var anyEstaDeVolta; // pode ser qualquer tipo
+var unknownValue; // obrigado a validar valor antes de alocar dentro de um unknown
 unknownValue = 3;
 unknownValue = 'opa';
 unknownValue = true;
 unknownValue = 'not true anymore?';
-let stringTest = 'agora vai';
+var stringTest = 'agora vai';
 // ABAIXO não funciona
 // stringTest = unknownValue;
 if (typeof unknownValue === 'string') {

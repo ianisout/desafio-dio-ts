@@ -22,7 +22,7 @@ function printarValoresNumericos(num1, num2) {
 }
 // callbacks
 function somarValoresNumericosETratar(num1, num2, callback) {
-    let resultado = num1 + num2;
+    var resultado = num1 + num2;
     return callback(resultado);
 }
 function aoQuadrado(num) {

@@ -1,16 +1,16 @@
 "use strict";
-const pessoa = {
+var pessoa = {
     nome: 'João',
     idade: 30,
     prof: 'pintor',
 };
 pessoa.idade = 31;
-const ian = {
+var ian = {
     nome: 'Ian',
     idade: 30,
     prof: 'desenvolvedor',
 };
-const julia = {
+var julia = {
     nome: 'Julia',
     idade: 30,
     prof: 'desenvolvedor',
@@ -22,24 +22,26 @@ var Profissao;
     Profissao[Profissao["Desenvolvedora"] = 2] = "Desenvolvedora";
     Profissao[Profissao["Streamer"] = 3] = "Streamer";
 })(Profissao || (Profissao = {}));
-const isis = {
+var isis = {
     nome: 'Isis',
     idade: 50,
     prof: Profissao.Streamer,
 };
-const jessica = {
+var jessica = {
     nome: 'Jessica',
     idade: 21,
     prof: Profissao.Atriz,
     materias: ['Matemática', 'Português', 'Inglês'],
 };
-const monica = {
+var monica = {
     nome: 'Mônica',
     idade: 21,
     materias: ['Matemática', 'Português', 'Inglês'],
 };
 function listar(lista) {
-    for (const item of lista)
+    for (var _i = 0, lista_1 = lista; _i < lista_1.length; _i++) {
+        var item = lista_1[_i];
         console.log('- ', item);
+    }
 }
 listar(monica.materias);
