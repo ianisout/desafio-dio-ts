@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="dist/app.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="dist/desafios/desafio1.js" defer></script>
+    <script src="dist/desafios/desafio2.js" defer></script>
+    <script src="dist/desafios/desafio3.js" defer></script>
+    <script src="dist/desafios/desafio4.js" defer></script>
+    <title>DIO TS</title>
+  </head>
+  <body>
+    <h2>Desafios 1 e 2 printados no console</h2>
+    <hr />
+    <h1>Desafio 3:</h1>
+    <h4>Valor a ser adicionado: <input id="soma" /></h4>
+    <button id="atualizar-saldo">Atualizar saldo</button>
+    <button id="limpar-saldo">Limpar seu saldo</button>
+    <h2>"Seu saldo é: " <span id="campo-saldo"></span></h2>
 
-  <input id="input1">
-  <input id="input2">
-  <button id="button">Clique aqui</button>
-  <title>DIO TS</title>
-</head>
-<body>
-  
-</body>
+    <hr />
+
+    <h1>Desafio 4:</h1>
+
+    <div style="display: flex">
+      <div
+        style="
+          display: flex;
+          width: 300px;
+          height: 100px;
+          justify-content: space-between;
+          flex-direction: column;
+        "
+      >
+        <input
+          id="login"
+          placeholder="Login"
+          onchange="preencherLogin(event)"
+        />
+        <input
+          id="senha"
+          placeholder="Senha"
+          type="password"
+          onchange="preencherSenha(event)"
+        />
+        <input id="api-key" placeholder="Api Key" onchange="preencherApi()" />
+        <button id="login-button" disabled>Login</button>
+      </div>
+      <div id="search-container" style="margin-left: 20px">
+        <input id="search" placeholder="Escreva..." />
+        <button id="search-button">Pesquisar Filme</button>
+      </div>
+    </div>
+  </body>
 </html>
