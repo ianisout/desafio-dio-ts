@@ -1,13 +1,62 @@
-let button = document.getElementById('button')
-let input1 = document.getElementById('input1') as HTMLInputElement
-let input2 = document.getElementById('input2') as HTMLInputElement
+const pessoa = {
+  nome: 'João',
+  idade: 30,
+  prof: 'pintor',
+};
 
-function somaTs(num1: number, num2: number) {
-  return num1 + num2
+pessoa.idade = 31;
+
+const ian: { nome: string; idade: number; prof: string } = {
+  nome: 'Ian',
+  idade: 30,
+  prof: 'desenvolvedor',
+};
+
+const julia: { nome: string; idade: number; prof: string } = {
+  nome: 'Julia',
+  idade: 30,
+  prof: 'desenvolvedor',
+};
+
+enum Profissao {
+  Professora,
+  Atriz,
+  Desenvolvedora,
+  Streamer,
 }
 
-if (button)
-  button.addEventListener('click', () => {
-    if (input1 && input2)
-      console.log(somaTs(+input1.value, +input2.value))
-  })
+interface Pessoa {
+  nome: string;
+  idade: number;
+  prof?: Profissao;
+  // ? significa que não é obrigatório
+}
+
+interface Estudante extends Pessoa {
+  materias: string[];
+}
+
+const isis: Pessoa = {
+  nome: 'Isis',
+  idade: 50,
+  prof: Profissao.Streamer,
+};
+
+const jessica: Estudante = {
+  nome: 'Jessica',
+  idade: 21,
+  prof: Profissao.Atriz,
+  materias: ['Matemática', 'Português', 'Inglês'],
+};
+
+const monica: Estudante = {
+  nome: 'Mônica',
+  idade: 21,
+  materias: ['Matemática', 'Português', 'Inglês'],
+};
+
+function listar(lista: string[]) {
+  for (const item of lista) console.log('- ', item)
+}
+
+listar(monica.materias)
